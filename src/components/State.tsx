@@ -100,7 +100,7 @@ function State() {
       <h3 className='place-self-center py-10 text-xl font-bold '>
         Select State
       </h3>
-      <div className=''>
+      <div className='place-self-center'>
         {/* buttons */}
 
         {Object.keys(bundesLand).length <= 0 ? (
@@ -123,7 +123,7 @@ function State() {
         )}
       </div>
 
-      <div>
+      <div className='place-self-center'>
         {/* graph */}
         {Object.keys(casesData).length <= 0 ? (
           <CircularProgress color='inherit' size={100} />

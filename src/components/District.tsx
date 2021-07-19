@@ -107,7 +107,7 @@ function District() {
         Districts in {stateName}
       </h1>
 
-      <div className=''>
+      <div className='place-self-center '>
         {Object.keys(casesData).length <= 0 ? (
           <CircularProgress color='inherit' size={100} />
         ) : (

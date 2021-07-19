@@ -103,7 +103,7 @@ function District() {
   return (
     <div className='grid grid-cols-1 '>
       {/* button */}
-      <h1 className='place-self-center  pt-10 text-4xl font-extrabold'>
+      <h1 className='place-self-center  pt-10 text-4xl font-extrabold text-center'>
         Districts in {stateName}
       </h1>
 
@@ -114,7 +114,7 @@ function District() {
           // { CodesAndName }
           <div>
             <div className='py-10  grid grid-cols-1 '>
-              <h2 className='place-self-center pb-5 text-2xl font-bold '>
+              <h2 className='place-self-center pb-5 text-2xl font-bold  '>
                 {districtName}
               </h2>
               {/* graph goes in here */}

@@ -94,7 +94,7 @@ function State() {
   // console.log(stateID)
   // console.log(casesData)
   // console.log(incidenceData)
-  console.log(metaData)
+  // console.log(metaData)
   return (
     <div className='grid grid-cols-1 '>
       <h3 className='place-self-center py-10 text-xl font-bold '>

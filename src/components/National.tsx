@@ -53,18 +53,6 @@ function National() {
     })
   }, [])
 
-  // console.log(casesData)
-  // console.log('incidence below')
-  // console.log(incidenceNum)
-  // console.log(incidenceDate)
-  // console.log(caseNum)
-  // console.log(caseDate)
-
-  // const someFunc = ()=>{
-
-  // }
-  // console.log(cases_figure)
-
   return (
     <div>
       {Object.keys(casesData).length <= 0 ? (

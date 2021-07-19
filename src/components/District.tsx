@@ -24,8 +24,6 @@ interface IStateInfo {
 function District() {
   const { id } = useParams<Data['params']>()
 
-  // console.log(id)
-
   const { stateID, setStateID, stateName, setStateName } = useGlobalContext()
   const [districtCode, setDistrictCode] = useState('09162')
   const [districtName, setDistrictName] = useState(
@@ -47,13 +45,13 @@ function District() {
       }
     })
   }, [])
-  // console.log(stateDistricts)
+
   // extract district data
   useEffect(() => {
     getDistrictData(districtCode).then((data) => {
       setCasesData(data?.cases_data.data[districtCode].history)
       setIncidenceData(data?.incidence_data.data[districtCode].history)
-      // console.log(casesData)
+
       if (Object.keys(data?.cases_data.data[districtCode].history).length > 0) {
         const casesNumbers = [
           data?.cases_data.data[districtCode].history.map(
@@ -69,9 +67,6 @@ function District() {
 
         setCaseNum(casesNumbers)
         setCaseDate(casesDates)
-        console.log('cases')
-        console.log(caseNum)
-        console.log(caseDate)
       }
       if (
         Object.keys(data?.incidence_data.data[districtCode].history).length > 0
@@ -88,8 +83,6 @@ function District() {
         ]
         setIncidenceNum(incidenceNumbers)
         setIncidenceDate(dateOfIncidence)
-        console.log(incidenceNum)
-        // console.log(dateOfIncidence)
       }
     })
   }, [districtCode])
@@ -99,7 +92,6 @@ function District() {
     setDistrictName(nameOfDistrict)
   }
 
-  console.log(districtCode)
   return (
     <div className='grid grid-cols-1 '>
       {/* button */}
@@ -207,7 +199,3 @@ function District() {
 }
 
 export default District
-
-// Schleswig-Holstein
-// console.log(data.data[districtCode])
-// we also need county county name for display purpose

@@ -76,25 +76,15 @@ function State() {
         ]
         setIncidenceNum(incidenceNumbers)
         setIncidenceDate(dateOfIncidence)
-        // console.log(incidenceNumbers)
-        // console.log(dateOfIncidence)
       }
     })
   }, [stateID])
 
   const bundesLandHandler = (entry: string) => {
     setStateID(entry)
-    // console.log(stateNames)
+
     setStateName(bundesLand.data[entry].name)
-    // console.log(bundesLand.data[entry].name)
-    // console.log(stateID)
   }
-  // console.log(typeof bundesLand)
-  // console.log(bundesLand)
-  // console.log(stateID)
-  // console.log(casesData)
-  // console.log(incidenceData)
-  // console.log(metaData)
   return (
     <div className='grid grid-cols-1 '>
       <h3 className='place-self-center py-10 text-xl font-bold '>
@@ -202,14 +192,3 @@ function State() {
 }
 
 export default State
-
-{
-  /* <div className='p-5 grid sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-8'>
-                </div> */
-}
-{
-  /* {bundesLand.data[entry].name} */
-}
-
-// <h2 className='place-self-center'>State</h2>
-// <h3 className='place-self-center'>Pick a state</h3>
